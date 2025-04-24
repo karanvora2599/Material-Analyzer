@@ -1,0 +1,22 @@
+{
+    "name": "material-analyzer-frontend",
+    "private": true,
+    "version": "0.1.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "react": "^18",
+      "react-dom": "^18",
+      "react-dropzone": "^14",
+      "vite": "^5",
+      "tailwindcss": "^3",
+      "postcss": "^8",
+      "autoprefixer": "^10"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react": "^4"
+    }
+  }  

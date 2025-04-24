@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom tokens if needed */
+:root {
+  --brand: #4b8bbe;
+}
