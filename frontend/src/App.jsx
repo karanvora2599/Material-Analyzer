@@ -3,7 +3,7 @@ import Analyzer from "./components/Analyzer";
 import React from "react";
 import { useTheme } from "./ThemeContext";     // already created earlier
 import ampLight from "/Asset.png";
-import ampDark  from "/Asset.png";
+import ampDark  from "/AssetWhite.png";
 
 export default function App() {
   return (

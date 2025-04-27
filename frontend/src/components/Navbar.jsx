@@ -11,7 +11,7 @@ export default function Navbar() {
   const { theme } = useTheme();  
 
   return (
-    <header className="flex items-center justify-between px-6 md:px-10 py-3 shadow-sm bg-surface-light dark:bg-surface-dark dark:text-neutral-100 sticky top-0 z-50">
+    <header className="flex items-center justify-between px-6 md:px-10 py-3 shadow-sm bg-surface-light dark:bg-navDark backdrop-blur-md glass-edge dark:text-neutral-100 sticky top-0 z-50">
       {/* left side */}
       <div className="flex items-center">
         {/* <img src={logo} alt="Grain & co." className="h-8 w-auto" /> */}
