@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize Groq client with API key from environment variable
-# api_key = os.getenv("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")# Replace with your actual API key or set as environment variable
+api_key = ""# Replace with your actual API key or set as environment variable
 if not api_key:
     logger.error("GROQ_API_KEY environment variable not set.")
     raise Exception("GROQ_API_KEY environment variable not set.")
@@ -106,7 +106,7 @@ async def analyze_image(file: UploadFile = File(...)):
     try:
         # Create completion using Groq client
         completion = client.chat.completions.create(
-            model="llama-3.2-90b-vision-preview",
+            model="meta-llama/llama-4-maverick-17b-128e-instruct",
             messages=messages,
             temperature=1,
             max_tokens=4192,

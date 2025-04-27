@@ -11,9 +11,9 @@ export default function Dropzone({ onDrop }) {
   return (
     <div
       {...dz.getRootProps()}
-      className="border-2 border-dashed border-gray-300 rounded-lg
-                 h-[420px] flex flex-col items-center justify-center
-                 text-center cursor-pointer bg-gray-50 hover:bg-gray-100"
+      className="rounded-2xl h-[420px] flex flex-col items-center justify-center
+                 text-center cursor-pointer bg-gray-50 dark:bg-card-dark
+                 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
     >
       <input {...dz.getInputProps()} />
       <i className="fa-regular fa-image text-5xl text-gray-400 mb-4"></i>

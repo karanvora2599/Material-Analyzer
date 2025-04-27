@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* custom tokens if needed */
 :root {
   --brand: #4b8bbe;
+}
+
+@layer utilities {
+  .text-brand { color: var(--brand); }
+  .bg-brand   { background-color: var(--brand); }
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+  .dark body {
+    @apply bg-[#0d1117] text-gray-100;
+  }
 }

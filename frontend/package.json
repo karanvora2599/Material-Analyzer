@@ -3,20 +3,23 @@
     "private": true,
     "version": "0.1.0",
     "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "preview": "vite preview"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "dependencies": {
-      "react": "^18",
-      "react-dom": "^18",
-      "react-dropzone": "^14",
-      "vite": "^5",
-      "tailwindcss": "^3",
-      "postcss": "^8",
-      "autoprefixer": "^10"
+        "lucide-react": "^0.503.0",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-dropzone": "^14",
+        "styled-components": "^6.1.17",
+        "vite": "^6.3.3"
     },
     "devDependencies": {
-      "@vitejs/plugin-react": "^4"
+        "@tailwindcss/postcss": "^4.1.4",
+        "@vitejs/plugin-react": "^4",
+        "autoprefixer": "^10.4.21",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^3.4.17"
     }
-  }  
+}

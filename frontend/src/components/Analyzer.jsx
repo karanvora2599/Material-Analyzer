@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Dropzone from "./Dropzone";
 import MaterialCard from "./MaterialCard";
+import Loader from "./Loader";
+import ShadowButton from "./ShadowButton";
 import { analyzeImage } from "../api";
 
 export default function Analyzer() {
@@ -33,32 +35,33 @@ export default function Analyzer() {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid md:grid-cols-2 gap-10">
       {/* Upload box */}
       <div>
         <Dropzone onDrop={handleDrop} />
-        <button
-          onClick={runAnalysis}
-          disabled={!file || loading}
-          className="mt-4 inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700
-                     disabled:opacity-50 text-white px-6 py-2 rounded-md"
-        >
-          {loading ? (
-            <>
-              <span className="animate-spin border-2 border-transparent border-l-white rounded-full h-4 w-4" />
-              Analyzing…
-            </>
-          ) : (
-            <>
-              <i className="fa-solid fa-magnifying-glass"></i> Analyze
-            </>
-          )}
-        </button>
+        <div className="mt-5">
+          <ShadowButton onClick={runAnalysis} disabled={!file || loading}>
+              {loading ? "Analyzing…" : (
+              <>
+                <i className="fa-solid fa-magnifying-glass" /> Analyze
+              </>
+            )}
+          </ShadowButton>
+        </div>
         {error && <p className="text-red-600 mt-2">{error}</p>}
       </div>
 
       {/* Result card */}
-      <MaterialCard preview={previewURL} analysis={analysis} />
+      {loading ? (
+        /* same size & styling as the real card so nothing shifts */
+        <div className="rounded-2xl p-6 bg-card-light dark:bg-card-dark
+                        shadow-sm border border-gray-200 dark:border-neutral-700
+                        min-h-[420px] flex items-center justify-center">
+          <Loader />
+        </div>
+      ) : (
+        <MaterialCard preview={previewURL} analysis={analysis} />
+      )}
     </div>
   );
 }
