@@ -39,5 +39,6 @@ Thumbs.db
 .qodo
 *.ipynb
 nod
+*.pyc
 
 *node_modules*
